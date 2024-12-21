@@ -1,8 +1,5 @@
 let x=20
 function setup() {
-  let container = document.getElementById('clownrabbitsketch-container');
-  let canvas = createCanvas(400, 400);
-  canvas.parent(container); // Attach the canvas to the container
   createCanvas(400, 400);
 }
 function draw() {
