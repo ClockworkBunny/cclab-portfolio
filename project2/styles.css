@@ -1,0 +1,116 @@
+@font-face {
+    font-family: "AylaHandwritten";
+    src: url("fonts/AylaHandwritten-Regular.ttf") format("truetype");
+}
+body {
+    font-family: "AylaHandwritten", cursive;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav {
+    width: 100px;
+    padding: 100px;
+    background-color: #fff; /* Blank background */
+    border-right: 1px solid #ddd; /* Optional border */
+    height: 100vh;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+body {
+    font-family: "AylaHandwritten", cursive;
+    background-color: pink; 
+    color: #333;
+    margin: 0;
+}
+
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.4em;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    text-align: justify;
+}
+nav a:hover {
+    color: pink;
+    font-weight: bold;  
+}
+
+.custom-background {
+    background-image: url("imgs/background.png"); /* Path to your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.white-text {
+    color: white; /* Change text color to white */
+}
+
+/* Position the GIF at the bottom-left corner */
+.gif-corner {
+    position: fixed; /* Sticks it to the viewport */
+    bottom: 40px; /* Adjust distance from bottom */
+    left: 40px; /* Adjust distance from left */
+    width: 100px; /* Set width for the GIF */
+    height: auto; /* Maintain aspect ratio */
+    pointer-events: all; /* Ensure it responds to hover */
+    z-index: 9999; /* Keep it above other elements */
+}
+
+/* Position the GIF container at the bottom-left corner */
+.gif-corner {
+    position: fixed; /* Sticks to the viewport */
+    bottom: 10px; /* Adjust distance from the bottom */
+    left: 10px; /* Adjust distance from the left */
+    width: 100px; /* Set width */
+    height: auto;
+    z-index: 9999; /* Keep it above other elements */
+}
+
+/* Show the static frame by default */
+.gif-corner .static-frame {
+    display: block;
+    width: 100%; /* Matches container width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Hide the animated frame by default */
+.gif-corner .animated-frame {
+    display: none; /* Hidden initially */
+    width: 100%; /* Matches container width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* On hover, hide the static frame and show the animated frame */
+.gif-corner:hover .static-frame {
+    display: none; /* Hide the static image */
+}
+
+.gif-corner:hover .animated-frame {
+    display: block; /* Show the animated GIF */
+}
+
+/* Add scaling effect for smooth interaction */
+.gif-corner:hover {
+    transform: scale(1.1); /* Slightly enlarge the corner area */
+    transition: transform 0.3s ease;
+}
